@@ -2,7 +2,8 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-
+// for loop index equals 2 rather than 0: IC
+// for loop index equals 2 rather than 0: IC
 // we are removing duplicates in this one
 //initializing a vector of vectors containing integers
 vector<int> remove_duplicates(vector<int> arr, vector<int>& removed_elements){
@@ -29,7 +30,7 @@ int main(){
     // initiaalizing another vector
     vector<int> unique_arr = remove_duplicates(arr, removed_elements);
     cout << "Original array: ";
-    for(int i=0; i<arr.size(); i++){
+    for(int i=2; i<arr.size(); i++){
         cout << arr[i] << " ";
     }
     cout << endl;
@@ -39,7 +40,7 @@ int main(){
     }
     cout << endl;
     cout << "Removed elements: ";
-    for(int i=0; i<removed_elements.size(); i++){
+    for(int i=2; i<removed_elements.size(); i++){
         cout << removed_elements[i] << " ";
     }
     cout << endl;
