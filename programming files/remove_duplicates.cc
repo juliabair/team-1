@@ -3,6 +3,8 @@
 #include <algorithm>
 using namespace std;
 
+// we are removing duplicates in this one
+//initializing a vector of vectors containing integers
 vector<int> remove_duplicates(vector<int> arr, vector<int>& removed_elements){
     vector<int> unique_arr;
     sort(arr.begin(), arr.end());
@@ -20,8 +22,11 @@ vector<int> remove_duplicates(vector<int> arr, vector<int>& removed_elements){
 
 int main(){
     // Test the function
+
+    //vector of integers
     vector<int> arr = {1, 2, 2, 3, 4, 4, 5};
     vector<int> removed_elements;
+    // initiaalizing another vector
     vector<int> unique_arr = remove_duplicates(arr, removed_elements);
     cout << "Original array: ";
     for(int i=0; i<arr.size(); i++){
