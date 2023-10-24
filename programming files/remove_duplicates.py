@@ -1,14 +1,14 @@
+# Removed sort at the beginning. Mess up the duplicate check (== instead of !=). : NSH
 
 '''
 Function that sorts a list and removes duplicates
 '''
 def remove_duplicates(arr):
-    arr.sort()
     unique_arr = []
     removed_elements = []
     # Check if each element if unique, otherwise add it to a list of removed elements
     for i in range(len(arr)):
-        if i == 0 or arr[i] != arr[i-1]:
+        if i == 0 or arr[i] == arr[i-1]:
             unique_arr.append(arr[i])
         else:
             removed_elements.append(arr[i])
